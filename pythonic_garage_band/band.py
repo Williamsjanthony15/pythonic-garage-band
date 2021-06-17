@@ -1,0 +1,51 @@
+class Band:
+    def __init__(self, name, members=None):
+        self.name = name
+        self.members = members
+
+    def __str__(self):
+        return f"The band {self.name}"
+
+    def __repr__(self):
+        return f"Band instance. name={self.name}, members={self.members}"
+
+
+class Musician(Band):
+
+    def __init__ (self, name = 'Default name'):
+        self.name = name
+
+
+
+class Guitarist(Band):
+    def __str__ (self):
+        return f'My name is {self.name} and I play guitar'
+    def __repr__ (self):
+        return f'Guitarist instance. Name = {self.name}'
+    @staticmethod
+    def get_instrument():
+        return "guitar"
+
+
+class Bassist(Band):
+
+    def __str__ (self):
+        return f'My name is {self.name} and I play bass'
+    def __repr__ (self):
+        return f'Bassist instance. Name = {self.name}'
+    
+    @staticmethod
+    def get_instrument():
+        return "bass"
+
+class Drummer(Band):
+
+    def __str__ (self):
+        return f'My name is {self.name} and I play drums'
+    def __repr__ (self):
+        return f'Drummer instance. Name = {self.name}'
+
+    @staticmethod
+    def get_instrument():
+        return "drums"
+
